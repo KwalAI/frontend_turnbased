@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+ voicebot_frontend:
+  container_name: frontend_turnbased
+  image: frontend_turnbased
+  build:
+   context: .
+  ports:
+   - 3000:3000
