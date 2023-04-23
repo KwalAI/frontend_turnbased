@@ -70,7 +70,7 @@ function Interview() {
 		let blob = await recorder.getBlob();
 		const fd = new FormData();
 		fd.append("audio", blob);
-		fetch("https://backendturnbased-trial.up.railway.app/conversation", {
+		fetch("/conversation", {
 			headers: { Accept: "application/json" },
 			method: "POST",
 			body: fd,
@@ -97,7 +97,7 @@ function Interview() {
 			};
 			fetch(
 				// "https://voicebotbackend-production.up.railway.app/profile",
-				"https://backendturnbased-trial.up.railway.app/profile",
+				"/profile",
 				requestOptions
 			)
 				.then((response) => response.json())
@@ -111,7 +111,7 @@ function Interview() {
 
 	useEffect(() => {
 		if (linkedinProfile != "") {
-			fetch("https://backendturnbased-trial.up.railway.app/welcome-instructions", {
+			fetch("/welcome-instructions", {
 				headers: { Accept: "application/json" },
 				method: "GET",
 			})
