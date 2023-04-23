@@ -97,7 +97,7 @@ function Interview() {
 			};
 			fetch(
 				// "https://voicebotbackend-production.up.railway.app/profile",
-				"/profile",
+				"https://backendturnbased-trial.up.railway.app/profile",
 				requestOptions
 			)
 				.then((response) => response.json())
